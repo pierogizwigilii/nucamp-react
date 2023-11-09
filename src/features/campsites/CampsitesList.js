@@ -1,9 +1,11 @@
+import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
 import { selectAllCampsites } from './campsitesSlice';
 
 const CampsitesList = () => {
-    const campsites = selectAllCampsites();
+    const campsites = useSelector(selectAllCampsites); //adding () invokes the function, but we don't want that right now just the function itself so removed this after selectAllCampsites()
+    console.log('campsites', campsites);
 
     return (
         <Row className="ms-auto">
