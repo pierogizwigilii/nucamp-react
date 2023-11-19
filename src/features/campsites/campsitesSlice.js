@@ -1,5 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { CAMPSITES } from '../../app/shared/CAMPSITES';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+//import { CAMPSITES } from '../../app/shared/CAMPSITES'; no longer using this local data, using json-server instead
+import { baseUrl } from '../../app/shared/baseURL';
+import { mapImageURL } from '../../utils/mapImageURL';
 
 const initialState = {
     campsitesArray: CAMPSITES

@@ -10,7 +10,7 @@ const CommentForm = ({ campsiteId }) => {
 
     const dispatch = useDispatch();
 
-    const handleSubmit = (values) =>  { 
+    const handleSubmit = (values) => { 
         const comment = {
             campsiteId: parseInt(campsiteId),
             rating: values.rating,

@@ -1,7 +1,7 @@
 export const validateCommentForm = (values) => {
     const errors = {};
 
-    if (!values.rating) {
+    if (isNaN(values.rating)) {
         errors.rating = 'Required';
     }
 
